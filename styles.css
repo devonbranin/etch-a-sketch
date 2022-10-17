@@ -5,12 +5,19 @@ body {
     min-height: 100vh;
 }
 
+#buttonhoist {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
 #container {
     height: 960px;
     width: 960px;
     display: flex;
     flex-direction: column;
-    flex-shrink: 0
+    flex-shrink: 0;
+    margin: 10px
 }
 
 .divBox {
