@@ -2,23 +2,25 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 100vh
+    min-height: 100vh;
 }
 
-.gridContainer {
-    max-width: 400px;
+#container {
+    height: 960px;
+    width: 960px;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0
 }
 
 .divBox {
-    width: 25px;
-    height: 25px;
     border: 2px solid black;
-    flex: 0 0 auto;
+    flex: 1
 }
 
 .divRow {
     display: flex;
-    flex: 1 0 auto
+    flex: 1
 }
 
 .touched {
