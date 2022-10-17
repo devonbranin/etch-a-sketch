@@ -3,6 +3,12 @@ const gridDimensionButton = document.querySelector('#griddimensions');
 
 let gridDimensions = 16
 
+function getRand(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
 function makeRow (n) {
     for (let i = 0; i < n; i++) {
     const divRow = document.createElement('div');
@@ -48,11 +54,16 @@ function removeGrid () {
 
 function touchBoxes () {
     const divBoxes = document.querySelectorAll(".divBox");
-divBoxes.forEach((box) => {
-    box.addEventListener('mouseenter', () => {
-        box.classList.add('touched', 'touching')
-    });
-    box.addEventListener('mouseleave', () => {
-        box.classList.remove('touching')
+    divBoxes.forEach((box) => {
+        box.addEventListener('mouseenter', () => {
+            box.classList.add('touching');
+            let red = getRand(0,255);
+            let blue = getRand(0,255);
+            let green = getRand(0,255);
+            box.style.backgroundColor = `rgb(${red},${blue},${green})`;
+        }
+        );
+        box.addEventListener('mouseleave', () => {
+        box.classList.remove('touching');
     })
 })}
