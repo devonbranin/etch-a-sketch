@@ -1,5 +1,4 @@
 body {
-    box-sizing: border-box;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -19,5 +18,13 @@ body {
 
 .divRow {
     display: flex;
-    flex: 0 0 auto
+    flex: 1 0 auto
+}
+
+.touched {
+    background-color: pink;
+}
+
+.touching {
+    border: 2px solid red;
 }

@@ -22,4 +22,14 @@ function makeGrid (n) {
     makeBox(n);
 }
 
-makeGrid(8)
+makeGrid(16)
+
+const divBoxes = document.querySelectorAll(".divBox");
+divBoxes.forEach((box) => {
+    box.addEventListener('mouseenter', () => {
+        box.classList.add('touched', 'touching')
+    });
+    box.addEventListener('mouseleave', () => {
+        box.classList.remove('touching')
+    })
+})
